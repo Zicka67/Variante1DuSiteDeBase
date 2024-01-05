@@ -97,16 +97,12 @@ nav {
 .nav-right a {
   position: absolute;
   right: 10px;
-  visibility: hidden; 
 }
 
 .nav-right a.active {
   visibility: visible;
 }
 
-.hidden-link {
-  visibility: hidden;
-}
 
 .nav-center {
   padding-right: 150px;
@@ -119,6 +115,10 @@ nav {
 a {
   text-decoration: none;
   color: black;
+}
+
+#register {
+  margin-right: 80px;
 }
 
 /* *********** FOOTER ******************  */

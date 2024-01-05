@@ -5,15 +5,21 @@
     </div>
 
     <div class="nav-center">
+        <a href="{{ path('app_home') }}">Accueil</a>
         <a href="#">Lien1</a>
         <a href="#">Lien2</a>
-        <a href="{{ path('app_home') }}">Accueil</a>
         <a href="#">Contact</a>
     </div>
     
-    <div class="nav-right" style="position: relative;">
-        <a href="{{ path('app_logout') }}" id="logout" class="{{ app.user ? 'active' : '' }}">Déconnexion</a>
-        <a href="{{ path('app_login') }}" id="login" class="{{ app.user ? '' : 'active' }}">Connexion</a>
+    <div class="nav-right">
+        {% if not app.user %}
+            <a href="{{ path('app_register') }}" id="register">Inscription</a>
+        {% endif %}
+        {% if app.user %}
+            <a href="{{ path('app_logout') }}" id="logout">Déconnexion</a>
+        {% else %}
+            <a href="{{ path('app_login') }}" id="login">Connexion</a>
+        {% endif %}
     </div>
 
 </nav>
