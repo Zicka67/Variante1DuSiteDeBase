@@ -30,11 +30,15 @@
 
     <body>
 
-        {% include "_partials/_nav.html.twig" %}
+        <div id="wrapper">
 
-        {% block body %}{% endblock %}
+            {% include "_partials/_nav.html.twig" %}
 
-        {% include "_partials/_footer.html.twig" %}
+            {% block body %}{% endblock %}
+
+            {% include "_partials/_footer.html.twig" %}
+
+        </div>
 
 
         {% block javascripts %}
