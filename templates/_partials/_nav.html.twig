@@ -1,3 +1,19 @@
 <nav>
-    <p>Ici la nav</p>
+
+    <div class="nav-left">
+        <a href="#">NomDuSite</a>
+    </div>
+
+    <div class="nav-center">
+        <a href="#">Lien1</a>
+        <a href="#">Lien2</a>
+        <a href="#">Accueil</a>
+        <a href="#">Contact</a>
+    </div>
+    
+    <div class="nav-right" style="position: relative;">
+        <a href="{{ path('app_logout') }}" id="logout" class="{{ app.user ? 'active' : '' }}">Déconnexion</a>
+        <a href="{{ path('app_login') }}" id="login" class="{{ app.user ? '' : 'active' }}">Connexion</a>
+    </div>
+
 </nav>

@@ -77,6 +77,48 @@ nav {
     background-color: bisque;
     padding-top: 15px;
     padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-left, .nav-center, .nav-right {
+  display: flex;
+}
+
+.nav-left {
+  margin-left: 10px;
+}
+
+.nav-right {
+  margin-right: 10px;
+  position: relative;
+}
+
+.nav-right a {
+  position: absolute;
+  right: 10px;
+  visibility: hidden; 
+}
+
+.nav-right a.active {
+  visibility: visible;
+}
+
+.hidden-link {
+  visibility: hidden;
+}
+
+.nav-center {
+  padding-right: 150px;
+}
+
+.nav-center a {
+  margin: 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 /* *********** FOOTER ******************  */
@@ -86,10 +128,31 @@ nav {
     flex-direction: column;
     min-height: 100vh;
   }
-  
+
   footer {
     margin-top: auto; 
     background-color: aquamarine;
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left, .footer-center, .footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.footer-right a {
+    margin-left: 10px;
+}
+
+.footer-center a {
+    /* margin: 0 auto;  */
+    margin-left: 180px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
