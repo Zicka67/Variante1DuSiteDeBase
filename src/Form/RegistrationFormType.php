@@ -26,6 +26,7 @@ class RegistrationFormType extends AbstractType
                         'message' => 'You should agree to our terms.',
                     ]),
                 ],
+                'label' => 'Veuillez accepter les conditions',
             ])
             ->add('plainPassword', RepeatedType::class, [
                 'type' => PasswordType::class,
